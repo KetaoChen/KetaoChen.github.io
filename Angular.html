@@ -5,20 +5,20 @@
   
 
   
-  <title>LinkedList Summary | Ketao Chen&#39;s Blog</title>
+  <title>Angular | Ketao Chen&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Tech Reverse: 92 Slow &amp;amp; Fast Pointer: check circle find the mid point of the list: 148   Use dummy Node Since linkedlist can not check prev, sometimes we need prev pointer to record  Tricks NullPo">
-<meta name="keywords" content="LinkedList">
+  <meta name="description" content="Commands Module Component Work Flow Techs  Command12# start angular serverng serve  12# generate new component: need to be connected to other componentsng generate component  12# generate new compone">
+<meta name="keywords" content="Angular">
 <meta property="og:type" content="article">
-<meta property="og:title" content="LinkedList Summary">
-<meta property="og:url" content="https://ketaochen.github.io/LinkedList.html">
+<meta property="og:title" content="Angular">
+<meta property="og:url" content="https://ketaochen.github.io/Angular.html">
 <meta property="og:site_name" content="Ketao Chen&#39;s Blog">
-<meta property="og:description" content="Tech Reverse: 92 Slow &amp;amp; Fast Pointer: check circle find the mid point of the list: 148   Use dummy Node Since linkedlist can not check prev, sometimes we need prev pointer to record  Tricks NullPo">
+<meta property="og:description" content="Commands Module Component Work Flow Techs  Command12# start angular serverng serve  12# generate new component: need to be connected to other componentsng generate component  12# generate new compone">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-02T05:48:08.070Z">
+<meta property="og:updated_time" content="2020-03-02T06:28:36.298Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="LinkedList Summary">
-<meta name="twitter:description" content="Tech Reverse: 92 Slow &amp;amp; Fast Pointer: check circle find the mid point of the list: 148   Use dummy Node Since linkedlist can not check prev, sometimes we need prev pointer to record  Tricks NullPo">
+<meta name="twitter:title" content="Angular">
+<meta name="twitter:description" content="Commands Module Component Work Flow Techs  Command12# start angular serverng serve  12# generate new component: need to be connected to other componentsng generate component  12# generate new compone">
   
     <link rel="alternate" href="/atom.xml" title="Ketao Chen&#39;s Blog" type="application/atom+xml">
   
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-LinkedList" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Angular" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/LinkedList.html" class="article-date">
-  <time datetime="2020-03-02T04:49:02.000Z" itemprop="datePublished">2020-03-01</time>
+    <a href="/Angular.html" class="article-date">
+  <time datetime="2020-03-02T05:40:08.000Z" itemprop="datePublished">2020-03-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Algorithms/">Algorithms</a>
+    <a class="article-category-link" href="/categories/Web/">Web</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      LinkedList Summary
+      Angular
     </h1>
   
 
@@ -93,52 +93,43 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="Tech"><a href="#Tech" class="headerlink" title="Tech"></a>Tech</h2><ol>
-<li>Reverse: 92</li>
-<li>Slow &amp; Fast Pointer:<ul>
-<li>check circle</li>
-<li>find the mid point of the list: 148</li>
+        <ul>
+<li>Commands</li>
+<li>Module</li>
+<li>Component</li>
+<li>Work Flow</li>
+<li>Techs</li>
 </ul>
-</li>
-<li>Use dummy Node</li>
-<li>Since linkedlist can not check prev, sometimes we need prev pointer to record</li>
+<h3 id="Command"><a href="#Command" class="headerlink" title="Command"></a>Command</h3><figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># start angular server</span></span><br><span class="line">ng serve</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># generate new component: need to be connected to other components</span></span><br><span class="line">ng generate component</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># generate new component: injectable</span></span><br><span class="line">ng generate service</span><br></pre></td></tr></table></figure>
+
+<h3 id="NgModule"><a href="#NgModule" class="headerlink" title="NgModule"></a>NgModule</h3><p>The Angular app have at least one Module.<br>The Module can have many components.</p>
+<h3 id="Angular-Component"><a href="#Angular-Component" class="headerlink" title="Angular Component"></a>Angular Component</h3><p>Angular app is composed of components.<br>In each component, there basically four documents.</p>
+<ol>
+<li>.html: the frame of the website</li>
+<li>.css: the view of the website</li>
+<li>.ts: the frontend logic, which controls the work flow</li>
+<li>.spec: the test document</li>
 </ol>
-<h2 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h2><ul>
-<li>NullPointerException: make sure to check null for each node</li>
-<li>Last node needs to point to null</li>
-<li>Need to ask whether the pointer or the value is mutable</li>
-<li>Check whether is a double-linked-list or single</li>
-</ul>
-<h2 id="Examples"><a href="#Examples" class="headerlink" title="Examples"></a>Examples</h2><table>
-<thead>
-<tr>
-<th>#</th>
-<th>Title</th>
-<th>Difficulty</th>
-<th>Solution</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>92</td>
-<td>Reverse Linked List II</td>
-<td>Medium</td>
-<td><a href="https://github.com/KetaoChen/LeetCode/tree/master/LinkedList/92.%20Reverse%20Linked%20List%20II" target="_blank" rel="noopener">Solution</a></td>
-</tr>
-<tr>
-<td>148</td>
-<td>Sort List</td>
-<td>Medium</td>
-<td><a href="https://github.com/KetaoChen/LeetCode/tree/master/LinkedList/148.%20Sort%20List" target="_blank" rel="noopener">Solution</a></td>
-</tr>
-</tbody></table>
+<h3 id="Work-Flow"><a href="#Work-Flow" class="headerlink" title="Work Flow"></a>Work Flow</h3><ol>
+<li>Start from app.component</li>
+<li>The router is responsible for the navigation of the website.</li>
+<li>In the view, when an event happens, the logic is written in the component.ts document.</li>
+</ol>
+<h3 id="Tech"><a href="#Tech" class="headerlink" title="Tech"></a>Tech</h3><p><strong>Data Binding:</strong><br>a)    Interpolation: one way data binding. Take data from a component property and show it in the view.<br>b)    Binding an event on the view to a method in the component.ts.<br>c)    NgModel: two way binding, banana in a box. Changed the property of that component. </p>
+<p><strong>Dependency Injection:</strong><br>In Angular DI is a built in feature.<br>Inject the services into components.</p>
+<p><strong>Session Storage:</strong><br>Can store a session by setting items.</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/LinkedList.html" data-id="ck7a3qess000650vjn9jarq5u" class="article-share-link">Share</a>
+      <a data-url="https://ketaochen.github.io/Angular.html" data-id="ck7a3qesh000050vjixtryvaf" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LinkedList/">LinkedList</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
 
     </footer>
   </div>
@@ -146,15 +137,20 @@
     
 <nav id="article-nav">
   
-    <a href="/Angular.html" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/SpringBoot.html" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Angular
+          SpringBoot
         
       </div>
     </a>
   
+  
+    <a href="/LinkedList.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">LinkedList Summary</div>
+    </a>
   
 </nav>
 
