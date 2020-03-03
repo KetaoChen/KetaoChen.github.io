@@ -5,20 +5,20 @@
   
 
   
-  <title>Django | Ketao Chen&#39;s Blog</title>
+  <title>Dynamic_Programming | Ketao Chen&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1. Activate &amp;amp; Deactivate:source venv/scripts/activate cd venv/scripts/ deactivate2. Start the ProjectPython manage.py runserver3. ComponentsQuote: the application package Template: html documents">
-<meta name="keywords" content="Django">
+  <meta name="description" content="Dynamic ProgrammingAnswer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the">
+<meta name="keywords" content="DP">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Django">
-<meta property="og:url" content="https://ketaochen.github.io/Django.html">
+<meta property="og:title" content="Dynamic_Programming">
+<meta property="og:url" content="https://ketaochen.github.io/Dynamic-Programming.html">
 <meta property="og:site_name" content="Ketao Chen&#39;s Blog">
-<meta property="og:description" content="1. Activate &amp;amp; Deactivate:source venv/scripts/activate cd venv/scripts/ deactivate2. Start the ProjectPython manage.py runserver3. ComponentsQuote: the application package Template: html documents">
+<meta property="og:description" content="Dynamic ProgrammingAnswer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-02T05:58:27.073Z">
+<meta property="og:updated_time" content="2020-03-03T01:33:32.655Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Django">
-<meta name="twitter:description" content="1. Activate &amp;amp; Deactivate:source venv/scripts/activate cd venv/scripts/ deactivate2. Start the ProjectPython manage.py runserver3. ComponentsQuote: the application package Template: html documents">
+<meta name="twitter:title" content="Dynamic_Programming">
+<meta name="twitter:description" content="Dynamic ProgrammingAnswer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the">
   
     <link rel="alternate" href="/atom.xml" title="Ketao Chen&#39;s Blog" type="application/atom+xml">
   
@@ -67,14 +67,14 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Django" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Dynamic-Programming" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/Django.html" class="article-date">
-  <time datetime="2020-03-02T05:49:20.000Z" itemprop="datePublished">2020-03-02</time>
+    <a href="/Dynamic-Programming.html" class="article-date">
+  <time datetime="2020-03-03T01:32:18.000Z" itemprop="datePublished">2020-03-02</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
+    <a class="article-category-link" href="/categories/Algorithms/">Algorithms</a>
   </div>
 
   </div>
@@ -85,7 +85,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Django
+      Dynamic_Programming
     </h1>
   
 
@@ -93,23 +93,32 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-Activate-amp-Deactivate"><a href="#1-Activate-amp-Deactivate" class="headerlink" title="1. Activate &amp; Deactivate:"></a>1. Activate &amp; Deactivate:</h3><pre><code>source venv/scripts/activate
-cd venv/scripts/
-deactivate</code></pre><h3 id="2-Start-the-Project"><a href="#2-Start-the-Project" class="headerlink" title="2. Start the Project"></a>2. Start the Project</h3><pre><code>Python manage.py runserver</code></pre><h3 id="3-Components"><a href="#3-Components" class="headerlink" title="3. Components"></a>3. Components</h3><p><strong>Quote</strong>: the application package</p>
-<p><strong>Template</strong>: html documents for each view</p>
-<p><strong>Views.py</strong>: frontend logic and operations in python</p>
-<p><strong>Url.py</strong>: define url path.</p>
-<p><strong>Model.py</strong>: a database</p>
-<p><strong>Admin.py</strong>: admin for database</p>
-<p><strong>Migration.py</strong>: create database</p>
+        <h1 id="Dynamic-Programming"><a href="#Dynamic-Programming" class="headerlink" title="Dynamic Programming"></a>Dynamic Programming</h1><h3 id="Answer-Template-139-Word-Break"><a href="#Answer-Template-139-Word-Break" class="headerlink" title="Answer Template 139: Word Break"></a>Answer Template 139: Word Break</h3><p><strong>1. Restate the problem:</strong><br>This question is asking whether we can use the words in dictionary to form the string.</p>
+<p><strong>2. Come up an idea and briefly state the reason:</strong><br>We can solve this problem using dfs or dynamic programming, since we can easily find out its subproblems.<br>For example: If the string can be formed using the words in the dictionary, we can find a word in the dictionary that matches last k characters. Then, if we just need to check whether the rest of string can be form by the words in the dictionary.</p>
+<p><strong>3. Show one example:</strong><br>For example: we have a string s, and a list of words. We can start from the last character to check, whether we can have a word to match last k character.<br>String s: <strong>****</strong>***<strong>****</strong>word<br>If we can find a word that matches. Then what we need to do is to check whether the rest of the string can be formed by the words in the dictionary, which is a subproblem.</p>
+<p><strong>4. State the subproblem and write the transfer equation.</strong><br>For dp, the most important part is the definition of state and transfer equation.<br>In this problem, we can use dp[i] to represent whether we can form the s[0-i] using the dictionary.<br>dp[i] |= dp[j] when s[j-i] is a word for j=[1, i].</p>
+<h3 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h3><p><strong>Sequence:</strong> 139, 837, 931, 1289</p>
+<p><strong>Backpack:</strong> 377, 474, 956</p>
+<p><strong>Interval:</strong></p>
+<p><strong>Coordinate:</strong> 174, 221, 1277, 1301, 1349</p>
+<p><strong>Partition:</strong></p>
+<h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h3><ol>
+<li>Initialization.<br>Sometimes, it is difficult to find. So use dfs + memo is easier to solve. e.g. 1340. Jump Game V<br>Sometimes, we need to think about the basic case clear. e.g. 956. Tallest Billboard &amp; 10. Regular Expression Matching</li>
+<li>Check the bound.<br>Because of the transfer equation, we have to make sure the indexes are not out of bound.</li>
+<li>Update order.<br>We need to update the state which will not effect other result in this level first. e.g. Backpack problems. From larger capacity.</li>
+</ol>
+<h3 id="Tech"><a href="#Tech" class="headerlink" title="Tech"></a>Tech</h3><ol>
+<li>Bit Mask:<br>Use bit to represent state, and O(1) time complexity to check the state.</li>
+<li>Elimination variable:<br>When there is relationship between the varibles in the state, we can utilize the relationship to reduce dimension.</li>
+</ol>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/Django.html" data-id="ck7b7xs0v0004ewvj739edke2" class="article-share-link">Share</a>
+      <a data-url="https://ketaochen.github.io/Dynamic-Programming.html" data-id="ck7b7xs0n0000ewvjajf23awt" class="article-share-link">Share</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/">Django</a></li></ul>
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DP/">DP</a></li></ul>
 
     </footer>
   </div>
@@ -117,19 +126,10 @@ deactivate</code></pre><h3 id="2-Start-the-Project"><a href="#2-Start-the-Projec
     
 <nav id="article-nav">
   
-    <a href="/Leetcode.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Leetcode
-        
-      </div>
-    </a>
   
-  
-    <a href="/SpringBoot.html" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/Leetcode.html" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">SpringBoot</div>
+      <div class="article-nav-title">Leetcode</div>
     </a>
   
 </nav>
