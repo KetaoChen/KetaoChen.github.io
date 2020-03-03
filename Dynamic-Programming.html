@@ -7,18 +7,18 @@
   
   <title>Dynamic_Programming | Ketao Chen&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Dynamic ProgrammingAnswer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the">
+  <meta name="description" content="Answer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the reason:We can solv">
 <meta name="keywords" content="DP">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dynamic_Programming">
 <meta property="og:url" content="https://ketaochen.github.io/Dynamic-Programming.html">
 <meta property="og:site_name" content="Ketao Chen&#39;s Blog">
-<meta property="og:description" content="Dynamic ProgrammingAnswer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the">
+<meta property="og:description" content="Answer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the reason:We can solv">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2020-03-03T01:33:32.655Z">
+<meta property="og:updated_time" content="2020-03-03T01:34:33.288Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dynamic_Programming">
-<meta name="twitter:description" content="Dynamic ProgrammingAnswer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the">
+<meta name="twitter:description" content="Answer Template 139: Word Break1. Restate the problem:This question is asking whether we can use the words in dictionary to form the string. 2. Come up an idea and briefly state the reason:We can solv">
   
     <link rel="alternate" href="/atom.xml" title="Ketao Chen&#39;s Blog" type="application/atom+xml">
   
@@ -93,7 +93,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="Dynamic-Programming"><a href="#Dynamic-Programming" class="headerlink" title="Dynamic Programming"></a>Dynamic Programming</h1><h3 id="Answer-Template-139-Word-Break"><a href="#Answer-Template-139-Word-Break" class="headerlink" title="Answer Template 139: Word Break"></a>Answer Template 139: Word Break</h3><p><strong>1. Restate the problem:</strong><br>This question is asking whether we can use the words in dictionary to form the string.</p>
+        <h3 id="Answer-Template-139-Word-Break"><a href="#Answer-Template-139-Word-Break" class="headerlink" title="Answer Template 139: Word Break"></a>Answer Template 139: Word Break</h3><p><strong>1. Restate the problem:</strong><br>This question is asking whether we can use the words in dictionary to form the string.</p>
 <p><strong>2. Come up an idea and briefly state the reason:</strong><br>We can solve this problem using dfs or dynamic programming, since we can easily find out its subproblems.<br>For example: If the string can be formed using the words in the dictionary, we can find a word in the dictionary that matches last k characters. Then, if we just need to check whether the rest of string can be form by the words in the dictionary.</p>
 <p><strong>3. Show one example:</strong><br>For example: we have a string s, and a list of words. We can start from the last character to check, whether we can have a word to match last k character.<br>String s: <strong>****</strong>***<strong>****</strong>word<br>If we can find a word that matches. Then what we need to do is to check whether the rest of the string can be formed by the words in the dictionary, which is a subproblem.</p>
 <p><strong>4. State the subproblem and write the transfer equation.</strong><br>For dp, the most important part is the definition of state and transfer equation.<br>In this problem, we can use dp[i] to represent whether we can form the s[0-i] using the dictionary.<br>dp[i] |= dp[j] when s[j-i] is a word for j=[1, i].</p>
@@ -115,7 +115,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/Dynamic-Programming.html" data-id="ck7b7xs0n0000ewvjajf23awt" class="article-share-link">Share</a>
+      <a data-url="https://ketaochen.github.io/Dynamic-Programming.html" data-id="ck7b7z4dw0001q8vjodnjqyab" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DP/">DP</a></li></ul>

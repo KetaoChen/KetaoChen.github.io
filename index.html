@@ -65,66 +65,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-Dynamic-Programming" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/Dynamic-Programming.html" class="article-date">
-  <time datetime="2020-03-03T01:32:18.000Z" itemprop="datePublished">2020-03-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Algorithms/">Algorithms</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/Dynamic-Programming.html">Dynamic_Programming</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Dynamic-Programming"><a href="#Dynamic-Programming" class="headerlink" title="Dynamic Programming"></a>Dynamic Programming</h1><h3 id="Answer-Template-139-Word-Break"><a href="#Answer-Template-139-Word-Break" class="headerlink" title="Answer Template 139: Word Break"></a>Answer Template 139: Word Break</h3><p><strong>1. Restate the problem:</strong><br>This question is asking whether we can use the words in dictionary to form the string.</p>
-<p><strong>2. Come up an idea and briefly state the reason:</strong><br>We can solve this problem using dfs or dynamic programming, since we can easily find out its subproblems.<br>For example: If the string can be formed using the words in the dictionary, we can find a word in the dictionary that matches last k characters. Then, if we just need to check whether the rest of string can be form by the words in the dictionary.</p>
-<p><strong>3. Show one example:</strong><br>For example: we have a string s, and a list of words. We can start from the last character to check, whether we can have a word to match last k character.<br>String s: <strong>****</strong>***<strong>****</strong>word<br>If we can find a word that matches. Then what we need to do is to check whether the rest of the string can be formed by the words in the dictionary, which is a subproblem.</p>
-<p><strong>4. State the subproblem and write the transfer equation.</strong><br>For dp, the most important part is the definition of state and transfer equation.<br>In this problem, we can use dp[i] to represent whether we can form the s[0-i] using the dictionary.<br>dp[i] |= dp[j] when s[j-i] is a word for j=[1, i].</p>
-<h3 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h3><p><strong>Sequence:</strong> 139, 837, 931, 1289</p>
-<p><strong>Backpack:</strong> 377, 474, 956</p>
-<p><strong>Interval:</strong></p>
-<p><strong>Coordinate:</strong> 174, 221, 1277, 1301, 1349</p>
-<p><strong>Partition:</strong></p>
-<h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h3><ol>
-<li>Initialization.<br>Sometimes, it is difficult to find. So use dfs + memo is easier to solve. e.g. 1340. Jump Game V<br>Sometimes, we need to think about the basic case clear. e.g. 956. Tallest Billboard &amp; 10. Regular Expression Matching</li>
-<li>Check the bound.<br>Because of the transfer equation, we have to make sure the indexes are not out of bound.</li>
-<li>Update order.<br>We need to update the state which will not effect other result in this level first. e.g. Backpack problems. From larger capacity.</li>
-</ol>
-<h3 id="Tech"><a href="#Tech" class="headerlink" title="Tech"></a>Tech</h3><ol>
-<li>Bit Mask:<br>Use bit to represent state, and O(1) time complexity to check the state.</li>
-<li>Elimination variable:<br>When there is relationship between the varibles in the state, we can utilize the relationship to reduce dimension.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/Dynamic-Programming.html" data-id="ck7b7xs0n0000ewvjajf23awt" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DP/">DP</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-Angular" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/Angular.html" class="article-date">
@@ -184,10 +124,70 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/Angular.html" data-id="ck7b7xs0r0001ewvjp2lcq75s" class="article-share-link">Share</a>
+      <a data-url="https://ketaochen.github.io/Angular.html" data-id="ck7b7z4dr0000q8vjpil4cn0h" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Angular/">Angular</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Dynamic-Programming" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Dynamic-Programming.html" class="article-date">
+  <time datetime="2020-03-03T01:32:18.000Z" itemprop="datePublished">2020-03-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Algorithms/">Algorithms</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/Dynamic-Programming.html">Dynamic_Programming</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Answer-Template-139-Word-Break"><a href="#Answer-Template-139-Word-Break" class="headerlink" title="Answer Template 139: Word Break"></a>Answer Template 139: Word Break</h3><p><strong>1. Restate the problem:</strong><br>This question is asking whether we can use the words in dictionary to form the string.</p>
+<p><strong>2. Come up an idea and briefly state the reason:</strong><br>We can solve this problem using dfs or dynamic programming, since we can easily find out its subproblems.<br>For example: If the string can be formed using the words in the dictionary, we can find a word in the dictionary that matches last k characters. Then, if we just need to check whether the rest of string can be form by the words in the dictionary.</p>
+<p><strong>3. Show one example:</strong><br>For example: we have a string s, and a list of words. We can start from the last character to check, whether we can have a word to match last k character.<br>String s: <strong>****</strong>***<strong>****</strong>word<br>If we can find a word that matches. Then what we need to do is to check whether the rest of the string can be formed by the words in the dictionary, which is a subproblem.</p>
+<p><strong>4. State the subproblem and write the transfer equation.</strong><br>For dp, the most important part is the definition of state and transfer equation.<br>In this problem, we can use dp[i] to represent whether we can form the s[0-i] using the dictionary.<br>dp[i] |= dp[j] when s[j-i] is a word for j=[1, i].</p>
+<h3 id="Category"><a href="#Category" class="headerlink" title="Category"></a>Category</h3><p><strong>Sequence:</strong> 139, 837, 931, 1289</p>
+<p><strong>Backpack:</strong> 377, 474, 956</p>
+<p><strong>Interval:</strong></p>
+<p><strong>Coordinate:</strong> 174, 221, 1277, 1301, 1349</p>
+<p><strong>Partition:</strong></p>
+<h3 id="Tricks"><a href="#Tricks" class="headerlink" title="Tricks"></a>Tricks</h3><ol>
+<li>Initialization.<br>Sometimes, it is difficult to find. So use dfs + memo is easier to solve. e.g. 1340. Jump Game V<br>Sometimes, we need to think about the basic case clear. e.g. 956. Tallest Billboard &amp; 10. Regular Expression Matching</li>
+<li>Check the bound.<br>Because of the transfer equation, we have to make sure the indexes are not out of bound.</li>
+<li>Update order.<br>We need to update the state which will not effect other result in this level first. e.g. Backpack problems. From larger capacity.</li>
+</ol>
+<h3 id="Tech"><a href="#Tech" class="headerlink" title="Tech"></a>Tech</h3><ol>
+<li>Bit Mask:<br>Use bit to represent state, and O(1) time complexity to check the state.</li>
+<li>Elimination variable:<br>When there is relationship between the varibles in the state, we can utilize the relationship to reduce dimension.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ketaochen.github.io/Dynamic-Programming.html" data-id="ck7b7z4dw0001q8vjodnjqyab" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/DP/">DP</a></li></ul>
 
     </footer>
   </div>
@@ -235,7 +235,7 @@ deactivate</code></pre><h3 id="2-Start-the-Project"><a href="#2-Start-the-Projec
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/Django.html" data-id="ck7b7xs0v0004ewvj739edke2" class="article-share-link">Share</a>
+      <a data-url="https://ketaochen.github.io/Django.html" data-id="ck7b7z4e10004q8vjjv0sr8qx" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Django/">Django</a></li></ul>
@@ -515,9 +515,81 @@ deactivate</code></pre><h3 id="2-Start-the-Project"><a href="#2-Start-the-Projec
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/Leetcode.html" data-id="ck7b7xs0x0005ewvj97hcl51z" class="article-share-link">Share</a>
+      <a data-url="https://ketaochen.github.io/Leetcode.html" data-id="ck7b7z4e20005q8vj50agsfnw" class="article-share-link">Share</a>
       
       
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-SpringBoot" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/SpringBoot.html" class="article-date">
+  <time datetime="2020-03-02T05:40:16.000Z" itemprop="datePublished">2020-03-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Web/">Web</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/SpringBoot.html">SpringBoot</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <ul>
+<li>Web Service<ul>
+<li>RESTful</li>
+<li>Spring Boot<ul>
+<li>MVC</li>
+<li>Auto Configure</li>
+<li>DI &amp; Inverse of Control</li>
+<li>JPA (Java Persistence API)</li>
+</ul>
+</li>
+<li>JWT (Json Web Token)</li>
+</ul>
+</li>
+</ul>
+<h3 id="What-is-Web-service"><a href="#What-is-Web-service" class="headerlink" title="What is Web service?"></a>What is Web service?</h3><p>a)    Design for machine-to-machine(application-to-application).<br>b)    Interoperable. (platform independent)<br>c)    Communication over a network. </p>
+<h3 id="RESTful"><a href="#RESTful" class="headerlink" title="RESTful"></a>RESTful</h3><p>a)    Make best use of HTTP: hyper text transfer protocol. to manipulate resource.<br>b)    HTTP request methods: GET, POST, PUT, DELETE. (CRUD)<br>c)    HTTP status code: 200, 301, 404<br>d)    Resource. URI(uniform resource Identifier) Assign a URI for each resource. </p>
+<h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><p><strong>MVC (Model-View-Controller):</strong></p>
+<ul>
+<li>The model is responsible for manipulate the data of the application. </li>
+<li>The view is the presentation of the model in a particular format.</li>
+<li>The controller interacts with different models according to differnt inputs.</li>
+<li>Make application loosely coupled.</li>
+</ul>
+<p><strong>Auto Configure:</strong><br>a)    Dispatcher servlet: front controller.<br>b)    Mapping the URI to corresponding method. </p>
+<p><strong>DI &amp; Inverse of Control:</strong><br>@AutoWire: Control all the beans to inject object to achieve inversion of control.</p>
+<p><strong>JPA(Java Persistence API):</strong><br>Hibernate: Provides a Entity (Object) relationship mapping between the classes and tables . </p>
+<h3 id="JWT-Json-Web-Token"><a href="#JWT-Json-Web-Token" class="headerlink" title="JWT (Json Web Token)"></a>JWT (Json Web Token)</h3><ol>
+<li>No expiration. </li>
+<li>Stateles.</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://ketaochen.github.io/SpringBoot.html" data-id="ck7b7z4e40006q8vjo2zb1ytm" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li></ul>
+
     </footer>
   </div>
   
@@ -593,82 +665,10 @@ deactivate</code></pre><h3 id="2-Start-the-Project"><a href="#2-Start-the-Projec
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/LinkedList.html" data-id="ck7b7xs0y0006ewvjgii0uam0" class="article-share-link">Share</a>
+      <a data-url="https://ketaochen.github.io/LinkedList.html" data-id="ck7b7z4e5000aq8vjxqwi1gdj" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/LinkedList/">LinkedList</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-SpringBoot" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/SpringBoot.html" class="article-date">
-  <time datetime="2020-03-02T05:40:16.000Z" itemprop="datePublished">2020-03-02</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Web/">Web</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/SpringBoot.html">SpringBoot</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ul>
-<li>Web Service<ul>
-<li>RESTful</li>
-<li>Spring Boot<ul>
-<li>MVC</li>
-<li>Auto Configure</li>
-<li>DI &amp; Inverse of Control</li>
-<li>JPA (Java Persistence API)</li>
-</ul>
-</li>
-<li>JWT (Json Web Token)</li>
-</ul>
-</li>
-</ul>
-<h3 id="What-is-Web-service"><a href="#What-is-Web-service" class="headerlink" title="What is Web service?"></a>What is Web service?</h3><p>a)    Design for machine-to-machine(application-to-application).<br>b)    Interoperable. (platform independent)<br>c)    Communication over a network. </p>
-<h3 id="RESTful"><a href="#RESTful" class="headerlink" title="RESTful"></a>RESTful</h3><p>a)    Make best use of HTTP: hyper text transfer protocol. to manipulate resource.<br>b)    HTTP request methods: GET, POST, PUT, DELETE. (CRUD)<br>c)    HTTP status code: 200, 301, 404<br>d)    Resource. URI(uniform resource Identifier) Assign a URI for each resource. </p>
-<h3 id="Spring"><a href="#Spring" class="headerlink" title="Spring"></a>Spring</h3><p><strong>MVC (Model-View-Controller):</strong></p>
-<ul>
-<li>The model is responsible for manipulate the data of the application. </li>
-<li>The view is the presentation of the model in a particular format.</li>
-<li>The controller interacts with different models according to differnt inputs.</li>
-<li>Make application loosely coupled.</li>
-</ul>
-<p><strong>Auto Configure:</strong><br>a)    Dispatcher servlet: front controller.<br>b)    Mapping the URI to corresponding method. </p>
-<p><strong>DI &amp; Inverse of Control:</strong><br>@AutoWire: Control all the beans to inject object to achieve inversion of control.</p>
-<p><strong>JPA(Java Persistence API):</strong><br>Hibernate: Provides a Entity (Object) relationship mapping between the classes and tables . </p>
-<h3 id="JWT-Json-Web-Token"><a href="#JWT-Json-Web-Token" class="headerlink" title="JWT (Json Web Token)"></a>JWT (Json Web Token)</h3><ol>
-<li>No expiration. </li>
-<li>Stateles.</li>
-</ol>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://ketaochen.github.io/SpringBoot.html" data-id="ck7b7xs10000aewvjiom6m92l" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/SpringBoot/">SpringBoot</a></li></ul>
 
     </footer>
   </div>
