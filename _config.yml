@@ -1,0 +1,23 @@
+title: Ketao's AI Learning
+description: Documenting my journey from Frontend to Full-Stack AI Engineer
+baseurl: ""
+url: "https://KetaoChen.github.io"
+
+theme: minima
+
+author:
+  name: Ketao Chen
+
+header_pages:
+  - about.md
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
