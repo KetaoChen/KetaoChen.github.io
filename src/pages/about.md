@@ -1,7 +1,6 @@
 ---
-layout: page
-title: About
-permalink: /about/
+layout: ../layouts/AboutLayout.astro
+title: "About"
 ---
 
 I'm Ketao, a software engineer transitioning from frontend to full-stack AI.
@@ -21,3 +20,4 @@ This blog documents my AI learning journey — from LLM fundamentals to building
 ## Links
 
 - [GitHub](https://github.com/KetaoChen)
+- [AI Learning Repo](https://github.com/KetaoChen/ai-learning)

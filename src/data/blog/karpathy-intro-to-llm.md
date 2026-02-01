@@ -1,9 +1,12 @@
 ---
-layout: post
 title: "Notes: Karpathy's Intro to Large Language Models"
-date: 2026-02-01
-categories: [llm-basics]
-tags: [karpathy, llm, notes]
+description: "Key takeaways from Andrej Karpathy's 1-hour intro talk on LLMs — covering training, scaling laws, tool use, and the LLM-as-OS analogy."
+pubDatetime: 2026-02-01T10:00:00-08:00
+tags:
+  - llm-basics
+  - karpathy
+  - notes
+featured: true
 ---
 
 Notes from Andrej Karpathy's [Intro to Large Language Models](https://www.youtube.com/watch?v=zjkBMFhNj_g) (Nov 2023, 1hr).
@@ -11,25 +14,33 @@ Notes from Andrej Karpathy's [Intro to Large Language Models](https://www.youtub
 ## Key Takeaways
 
 ### LLM = Two Files
+
 - **Parameters file** — neural network weights (Llama 2 70B = 140GB)
 - **Run file** — ~500 lines of C to run inference
 - Complexity is in training, not inference
 
 ### Training = Lossy Compression of the Internet
+
 - 10TB internet text → 140GB parameters ≈ 100x compression
 - Next word prediction forces the network to learn world knowledge
 - Knowledge storage is "weird" — knows Tom Cruise's mother, but not the reverse (reversal curse)
 
 ### Two-Stage Training
+
 1. **Pre-training** — massive internet data, produces base model (document generator)
 2. **Fine-tuning** — human-labeled Q&A pairs (~100K), produces assistant model
 3. **RLHF (optional)** — human comparisons for further refinement
 
 ### Scaling Laws
-- Performance = f(parameters N, data D) — predictable, monotonically increasing, no saturation
+
+The most important finding in the field:
+
+- Performance = f(parameters N, data D) — **predictable, monotonically increasing, no saturation**
 - This drives the GPU arms race: bigger model + more data = guaranteed better results
+- Algorithmic progress is a bonus; scaling is the reliable path
 
 ### LLM as Operating System
+
 The most powerful analogy in the talk:
 
 | Traditional OS | LLM OS |
@@ -42,9 +53,11 @@ The most powerful analogy in the talk:
 | Windows/Mac vs Linux | GPT/Claude vs Llama |
 
 ### Tool Use
+
 Modern LLMs call tools: browser search, Python execution, image generation. This is exactly what protocols like MCP are standardizing.
 
 ### Security Challenges
+
 - **Jailbreaks** — role-play bypasses, base64 encoding, adversarial suffixes
 - **Prompt injection** — hidden instructions in images/webpages/documents
 - **Data poisoning** — trigger phrases embedded in training data

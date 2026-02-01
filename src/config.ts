@@ -1,0 +1,23 @@
+export const SITE = {
+  website: "https://KetaoChen.github.io/",
+  author: "Ketao Chen",
+  profile: "https://github.com/KetaoChen",
+  desc: "Documenting my journey from Frontend to Full-Stack AI Engineer.",
+  title: "Ketao's AI Learning",
+  ogImage: "astropaper-og.jpg",
+  lightAndDarkMode: true,
+  postPerIndex: 4,
+  postPerPage: 4,
+  scheduledPostMargin: 15 * 60 * 1000,
+  showArchives: true,
+  showBackButton: true,
+  editPost: {
+    enabled: true,
+    text: "Edit page",
+    url: "https://github.com/KetaoChen/KetaoChen.github.io/edit/master/",
+  },
+  dynamicOgImage: true,
+  dir: "ltr",
+  lang: "en",
+  timezone: "America/Los_Angeles",
+} as const;
